@@ -1,0 +1,64 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+import java.util.*;
+import java.text.*;
+
+import java.sql.*;
+
+class BackupZGrocery extends JFrame
+{
+
+    public BackupZGrocery()
+    {
+    
+     super("Nitin's & Shabnam's Management System");
+	addWindowListener (new WindowAdapter () {
+			public void windowClosing (WindowEvent we) {
+				quitApp ();
+			}
+		}
+		);
+		
+		setSize(500,400);
+		
+		
+		
+	        setResizable(false);
+
+	        setVisible(true);
+	        setLocation(
+		(Toolkit.getDefaultToolkit().getScreenSize().width-getWidth() )/2,
+		(Toolkit.getDefaultToolkit().getScreenSize().height-getHeight() )/2
+		);
+    }
+   
+   private void quitApp ()
+	 {
+
+		try 
+		{
+			//Show a Confirmation Dialog.
+		    	int reply = JOptionPane.showConfirmDialog (this,
+					" Do you really want to exit?",
+					"Application System - Exit", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE);
+			//Check the User Selection.
+			if (reply == JOptionPane.YES_OPTION) 
+			{
+				setVisible (false);	//Hide the Frame.
+				dispose();            	//Free the System Resources.
+				System.out.println ("Thanks for Using ");
+				System.exit (0);        //Close the Application.
+			}
+			else if (reply == JOptionPane.NO_OPTION) 
+			{
+			setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+			}
+		} 
+
+		catch (Exception e) {}
+
+	}
+
+}

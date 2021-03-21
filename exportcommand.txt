@@ -1,0 +1,1 @@
+export CLASSPATH="poi-examples-4.1.2.jar:poi-excelant-4.1.2.jar:poi-scratchpad-4.1.2.jar:poi-ooxml-schemas-4.1.2.jar:poi-ooxml-4.1.2.jar: poi-4.1.2.jar:xmlbeans-3.1.0.jar:curvesapi-1.06.jar:mysql-connector-java-5.1.49.jar:commons-math3-3.6.1.jar:poi-3.8-beta4.jar:apache-poi-1.1.0.7.jar:commons-collections4-4.4.jar:commons-compress-1.20.jar:$CLASSPATH"
